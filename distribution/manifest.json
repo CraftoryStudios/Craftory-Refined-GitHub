@@ -1,0 +1,51 @@
+{
+	"name": "Craftory Refined GitHub",
+	"version": "1.0.0",
+	"description": "Adds useful features related to the Craftory Studios team workflow",
+	"homepage_url": "https://github.com/CraftoryStudios/craftory-refined-github",
+	"manifest_version": 2,
+	"minimum_chrome_version": "88",
+	"permissions": [
+		"storage",
+		"contextMenus",
+		"activeTab",
+		"alarms",
+		"https://github.com/*",
+		"https://api.github.com/*"
+	],
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"optional_permissions": [
+		"*://*/*"
+	],
+	"icons": {
+		"128": "icon.png"
+	},
+	"options_ui": {
+		"chrome_style": true,
+		"page": "options.html"
+	},
+	"background": {
+		"scripts": [
+			"build/browser-polyfill.js",
+			"build/background.js"
+		]
+	},
+	"content_scripts": [
+		{
+			"run_at": "document_start",
+			"matches": [
+				"https://github.com/*",
+				"https://gist.github.com/*"
+			],
+			"js": [
+				"build/browser-polyfill.js",
+				"build/craftory-refined-github.js"
+			]
+		}
+	],
+	"web_accessible_resources": [
+		"build/resolve-conflicts.js"
+	]
+}

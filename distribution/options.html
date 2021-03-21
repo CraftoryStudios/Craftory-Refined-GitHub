@@ -1,0 +1,72 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Craftory Refined GitHub options</title>
+<link rel="stylesheet" href="build/options.css">
+<form id="options-form" class="detail-view-container">
+	<p>
+		<strong>Information</strong><br>
+		Welcome!
+		Based off Refined Github
+	</p>
+
+	<hr>
+
+	<p>
+		<label>
+			<strong>Personal token</strong> (optional, <a id="personal-token-link" href="https://github.com/settings/tokens/new?description=Refined%20GitHub&scopes=repo" target="_blank">generate one</a>)<br>
+			<!-- placeholder is set to enable use of :placeholder-shown CSS selector -->
+			<input type="text" name="personalToken" spellcheck="false" autocomplete="off" pattern="[\da-f]{40}|gp1_\w{36,251}" placeholder=" ">
+			<span id="validation"></span>
+		</label>
+	</p>
+	<p>
+		The token enables some features to <strong>read</strong> data from public repositories
+	</p>
+	<ul>
+		<li data-validation data-scope="public_repo">The <code>public_repo</code> scope lets them <strong>edit</strong> your public repositories
+		<li data-validation data-scope="repo">The <code>repo</code> scope lets them <strong>edit private</strong> repositories as well
+		<li data-validation data-scope="delete_repo">The <code>delete_repo</code> scope is only used by the <code>quick-repo-deletion</code> feature
+	</ul>
+
+	<hr>
+
+	<p>
+		<label>
+			<strong>Custom CSS</strong> (useful to undo unwanted styles)
+			<textarea name="customCSS" rows="2" spellcheck="false"></textarea>
+		</label>
+	</p>
+
+	<hr id="debugging-position">
+
+	<div>
+		<p>
+			<label>
+				<strong class="features-header">Features</strong>
+				<input id="filter-features" type="text" placeholder="Find features" />
+			</label>
+		</p>
+		<div class="js-features"></div>
+	</div>
+
+	<div id="debugging">
+		<p>
+			<strong>Debugging</strong>
+		</p>
+		<p>
+			<label>
+				<input type="checkbox" name="logging">
+				Show the features enabled on each page in the console
+			</label>
+		</p>
+
+		<p>
+			<label>
+				<button id="clear-cache">Clear cache</button>
+			</label>
+		</p>
+	</div>
+
+</form>
+<script src="build/browser-polyfill.js"></script>
+<script src="build/options.js"></script>
