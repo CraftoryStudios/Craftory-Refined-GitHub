@@ -106,7 +106,7 @@ function buildFeatureCheckbox({id, description, screenshot}: FeatureMeta): HTMLE
 				<label htmlFor={id}>
 					<span className="feature-name">{id}</span>
 					{' '}
-					<a href={`https://github.com/CraftoryStudios/craftory-refined-github/blob/main/source/features/${id}.tsx`}>
+					<a href={`https://github.com/CraftoryStudios/Craftory-Refined-GitHub/blob/main/source/features/${id}.tsx`}>
 						source
 					</a>
 					{screenshot && <>, <a href={screenshot}>screenshot</a></>}

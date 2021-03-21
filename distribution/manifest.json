@@ -2,7 +2,7 @@
 	"name": "Craftory Refined GitHub",
 	"version": "1.0.0",
 	"description": "Adds useful features related to the Craftory Studios team workflow",
-	"homepage_url": "https://github.com/CraftoryStudios/craftory-refined-github",
+	"homepage_url": "https://github.com/CraftoryStudios/Craftory-Refined-GitHub",
 	"manifest_version": 2,
 	"minimum_chrome_version": "88",
 	"permissions": [

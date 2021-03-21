@@ -61,9 +61,9 @@ function logError(id: FeatureID, error: Error | string | unknown, ...extras: unk
 		error,
 		...extras,
 		stripIndent(`
-			Search issue: https://github.com/CraftoryStudios/craftory-refined-github/issues?q=is%3Aissue+${encodeURIComponent(message)}
+			Search issue: https://github.com/CraftoryStudios/Craftory-Refined-GitHub/issues?q=is%3Aissue+${encodeURIComponent(message)}
 
-			Open an issue: https://github.com/CraftoryStudios/craftory-refined-github/issues/new?labels=bug&template=bug_report.md&title=${encodeURIComponent(`\`${id}\`: ${message}`)}
+			Open an issue: https://github.com/CraftoryStudios/Craftory-Refined-GitHub/issues/new?labels=bug&template=bug_report.md&title=${encodeURIComponent(`\`${id}\`: ${message}`)}
 		`)
 	);
 }

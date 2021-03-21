@@ -53,7 +53,7 @@ browser.runtime.onInstalled.addListener(async ({reason}) => {
 		}
 
 		await browser.tabs.create({
-			url: 'https://github.com/CraftoryStudios/craftory-refined-github/issues',
+			url: 'https://github.com/CraftoryStudios/Craftory-Refined-GitHub/issues',
 			active: false
 		});
 	}
